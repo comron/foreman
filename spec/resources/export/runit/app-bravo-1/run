@@ -1,3 +1,4 @@
 #!/bin/sh
+exec 2>&1
 cd /tmp/app
-exec chpst -u app -e /tmp/init/app-bravo-1/env ./bravo
+exec chpst -u app -e /tmp/init/app-bravo-1/env sh -c './bravo'
